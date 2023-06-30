@@ -1,7 +1,10 @@
 import "./globals.css";
 
+import Modal from "./components/modals/Modal";
 import Navbar from "./components/navbar/Navbar";
 import { Nunito } from "next/font/google";
+import RegisterModal from "./components/modals/RegisterModal";
+import ToasterProvider from "./providers/ToasterProvider";
 
 export const metadata = {
   title: "Airbnb",
@@ -10,10 +13,16 @@ export const metadata = {
 
 const font = Nunito({ subsets: ["latin"] });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body className={font.className}>
+        <ToasterProvider />
+        <RegisterModal />
         <Navbar />
         {children}
       </body>
