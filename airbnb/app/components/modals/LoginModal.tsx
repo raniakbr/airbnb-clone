@@ -78,13 +78,13 @@ const LoginModal = () => {
         outline
         label="Continue with Google"
         icon={FcGoogle}
-        onClick={() => {}}
+        onClick={() => signIn("google")}
       />
       <Button
         outline
         label="Continue with Github"
         icon={AiFillGithub}
-        onClick={() => {}}
+        onClick={() => signIn("github")}
       />
       <div
         className="
@@ -94,16 +94,16 @@ const LoginModal = () => {
           font-light"
       >
         <div className="justify-center flex flex-row items-center gap-2">
-          <div>Already have an account?</div>
+          <div>{"You don't have an account?"}</div>
           <div
-            onClick={registerModal.onClose}
+            onClick={loginModal.onClose}
             className="
               text-neutral-800
               cursor-pointer
               hover:underline
             "
           >
-            Log in
+            Sign up
           </div>
         </div>
       </div>
