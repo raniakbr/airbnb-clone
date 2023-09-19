@@ -4,10 +4,11 @@ import { FieldValues, useForm } from "react-hook-form";
 import { useMemo, useState } from "react";
 
 import CategoryInput from "../inputs/CategoryInput";
+import CountrySelect from "../inputs/CountrySelect";
 import Heading from "../Heading";
 import Modal from "./Modal";
 import { categories } from "../navbar/Categories";
-import { setMaxListeners } from "events";
+import dynamic from "next/dynamic";
 import useRentModal from "@/app/hooks/useRentModal";
 
 enum STEPS {
@@ -46,12 +47,18 @@ const RentModal = () => {
   });
 
   const category = watch("category");
+  const location = watch("location");
+
+  const Map = useMemo(
+    () => dynamic(() => import("../Map"), { ssr: false }),
+    [location]
+  );
 
   const setCustomValue = (id: string, value: any) => {
     setValue(id, value, {
+      shouldValidate: true,
       shouldDirty: true,
       shouldTouch: true,
-      shouldValidate: true,
     });
   };
 
@@ -114,8 +121,13 @@ const RentModal = () => {
       <div className="flex flex-col gap-8">
         <Heading
           title="Where is your place located?"
-          subTitle="help guests find you!"
+          subTitle="Help guests find you!"
         />
+        <CountrySelect
+          value={location}
+          onChange={(value) => setCustomValue("location", value)}
+        />
+        <Map center={location?.latlng} />
       </div>
     );
   }
