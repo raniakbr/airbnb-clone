@@ -263,7 +263,7 @@ const RentModal = () => {
         />
       </div>
     );
-  }
+  }https://cloud.mongodb.com/v2/649f3ce0a48a61352e6e8deb#/dataAPI
 
   return (
     <Modal
