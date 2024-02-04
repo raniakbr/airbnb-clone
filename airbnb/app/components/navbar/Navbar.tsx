@@ -5,12 +5,13 @@ import React, { FC } from "react";
 import Categories from "./Categories";
 import Container from "../Container";
 import Logo from "./Logo";
+import { SafeUser } from "@/app/types";
 import Search from "./Search";
 import { User } from "@prisma/client";
 import UserMenu from "./UserMenu";
 
 interface NavbarProps {
-  currentUser?: User | null;
+  currentUser?: SafeUser | null;
 }
 
 const Navbar: FC<NavbarProps> = ({ currentUser }) => {

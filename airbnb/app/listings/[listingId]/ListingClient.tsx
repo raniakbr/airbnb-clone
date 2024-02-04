@@ -142,7 +142,9 @@ const ListingClient: FC<ListingClientProps> = ({
                 price={listing.price}
                 totalPrice={totalPrice}
                 dateRange={dateRange}
-                onChangeDate={(value) => setDateRange(value)}
+                onChangeDate={(value) => {
+                  console.log(value);
+                }}
                 onSubmit={onCreateReservation}
                 disabled={isLoading}
                 disabledDates={disabledDates}
