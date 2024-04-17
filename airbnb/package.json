@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -22,9 +22,10 @@
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "leaflet": "^1.9.4",
-    "next": "13.4.7",
+    "next": "13.5.2",
     "next-auth": "^4.22.1",
     "next-cloudinary": "^4.22.0",
+    "next-pwa": "^5.6.0",
     "postcss": "8.4.24",
     "prisma": "^4.16.2",
     "query-string": "^8.1.0",
@@ -38,6 +39,7 @@
     "react-select": "^5.7.4",
     "tailwindcss": "3.3.2",
     "typescript": "5.1.6",
+    "vercel": "^33.4.1",
     "world-countries": "^5.0.0",
     "zustand": "^4.3.8"
   },
