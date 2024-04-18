@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.emploitic.preprod.twa",
+      "sha256_cert_fingerprints": [
+        "C9:B4:4E:BF:42:72:48:0F:01:89:50:0D:BC:CF:CD:A7:F7:2E:98:8E:83:EE:93:58:CD:83:39:F7:54:3C:38:29"
+      ]
+    }
+  }
+]
