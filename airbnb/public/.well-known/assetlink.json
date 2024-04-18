@@ -3,9 +3,9 @@
     "relation": ["delegate_permission/common.handle_all_urls"],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.emploitic.preprod.twa",
+      "package_name": "app.vercel.airbnb_clone_hazel_delta.twa",
       "sha256_cert_fingerprints": [
-        "C9:B4:4E:BF:42:72:48:0F:01:89:50:0D:BC:CF:CD:A7:F7:2E:98:8E:83:EE:93:58:CD:83:39:F7:54:3C:38:29"
+        "7D:21:1C:F4:DD:13:03:55:1F:A4:97:19:60:85:68:CA:55:2B:57:8D:91:C1:DB:E0:A2:22:88:55:1B:C6:1F:81"
       ]
     }
   }
